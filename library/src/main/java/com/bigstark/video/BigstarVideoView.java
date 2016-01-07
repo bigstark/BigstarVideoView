@@ -185,6 +185,22 @@ public class BigstarVideoView extends TextureView {
         this.isRetainPlayerInstance = isRetain;
     }
 
+    /**
+     * @return video's width
+     */
+    public int getVideoWidth() {
+        return isReleased() ? 0 : player.getVideoWidth();
+    }
+
+
+    /**
+     * @return video's height
+     */
+    public int getVideoHeight() {
+        return isReleased() ? 0 : player.getVideoHeight();
+    }
+
+
 
     /**
      * Start video.
