@@ -5,5 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+    <com.bigstark.video.BigstarVideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
 
 </LinearLayout>
