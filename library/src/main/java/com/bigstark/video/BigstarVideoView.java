@@ -240,6 +240,7 @@ public class BigstarVideoView extends TextureView {
 
         player.pause();
         positionHandler.sendMessage(positionHandler.obtainMessage(STATE_PAUSE));
+        playbackEventListenerImpl.onPaused();
     }
 
 
