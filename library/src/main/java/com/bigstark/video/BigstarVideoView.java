@@ -506,7 +506,14 @@ public class BigstarVideoView extends TextureView {
 
         private void schedulePlaying() {
             removeMessages(STATE_PLAYING);
-            if (player == null || isReleased() || !player.isPlaying()) {
+            if (player == null || isReleased()) {
+                Log.e(TAG, "player is not initialized or released.");
+                return;
+            }
+
+            if (!player.isPlaying()) {
+                Log.v("BigstarVideoView", "player is not playing so start again");
+                start();
                 return;
             }
 
